@@ -5,7 +5,7 @@ mainN = input("Please input main nation: ")
 length = int(input("Please input how far in time you want to go back in days: "))
 names = []
 rates_of_change = []
-version = 1.0
+version = 1.2
 headers = {
     "User-Agent": f"Top 100 RoC/{version} (developer: https://github.com/Thorn1000 ; user:{mainN};)"
 }
@@ -50,7 +50,7 @@ for i, name in enumerate(names, 1):
     min_score = scores[timestamps.index(min_timestamp)]
 
     # Calculate rate of change
-    rate_of_change = round((max_score - min_score)/30,2)
+    rate_of_change = round((max_score - min_score)/length,2)
     rates_of_change.append((i, name, rate_of_change))
 
     print(f"Processed: {i}/{len(names)}")
