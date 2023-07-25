@@ -1,8 +1,8 @@
 import requests
 import time
 
-mainN = ("Please input main nation: ")
-length = ("Please input how far in time you want to go back in days: ")
+mainN = input("Please input main nation: ")
+length = int(input("Please input how far in time you want to go back in days: "))
 names = []
 rates_of_change = []
 version = 1.0
